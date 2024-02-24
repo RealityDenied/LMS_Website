@@ -3,25 +3,30 @@
     margin: 0;
 }
 
-.bparent{
+.container{
    height: 100vh;
     display: flex;
     flex-wrap: wrap;
 
 }
-.cparent{
+.right{
     
-    width: 75vw;
+    width: 75%;
     display: flex;
-    
     flex-direction: column;
    
 }
-.courseList{
+.left{
     
-    width: 25vw;
+    width: 25%;
     /* border: 2px solid blue; */
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;          /*by default it is content-box*/
+    padding: 10px;
     background-color: green;
+    
+
     /* background-image: url('courseListimg.PNG');
     background-repeat: no-repeat;
     background-size: cover; */
@@ -53,11 +58,48 @@
 
 }
 
+
+/* ------------------------------------------------------CSS for course---------------------------------------------------------------- */
+
+/* .courses{
+    
+    height: 100%; 
+    
+} */
+.courseDiv{
+    height: 60px;
+    width: 100%;
+    background-color: aqua;
+    /* border: 1px solid black; */
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5px;
+    box-sizing: border-box;
+}
+
+/* .courseDiv h2{
+    align-self: center;
+    justify-self: center;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
 @media(max-width:1000px){
-    .bparent{
+    .container{
         flex-direction: column-reverse;   
     }
-    .cparent{
+    .right{
         height:60vw ;
         /* min-height: 35vh; */
         width: 100vw;
@@ -66,9 +108,9 @@
         display: none;
     }
     .videoDiv{
-        height: 100%;         
+        height: 100%;       
     }
-    .courseList{
+    .left{
         height: calc(100% - 60vw);
         width: 100vw;    
     }
